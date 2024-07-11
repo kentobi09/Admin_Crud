@@ -33,8 +33,8 @@
                             <div class="form-group">
                                 <select class="form-control" id="edit-sex" name="edit-sex" required>
                                     <option value="">Select Sex</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -60,7 +60,7 @@
                                 <input type="date" class="form-control" id="edit-notificationDate" name="edit-notificationDate" placeholder="mm/dd/yyyy" required>
                             </div>
                             <div class="form-group">
-                                <input type="date" class="form-control" id="edit-examDate" name="edit-examDate" placeholder="mm/dd/yyyy" required>
+                                <input type="date" class="form-control" id="edit-examDate" name="edit-examDate" placeholder="mm/dd/yyyy"  required>
                             </div>
                             <div class="form-group">
                                 <select  class="form-control" id="edit-examVenue" name="edit-examVenue"required>
@@ -129,38 +129,7 @@
 
 </body>
 </html>
-<!-- <script>
-function editApplicant(id, fname,mname,lname, sex, province, contactNumber, emailAddress, notificationDate, examDate, examVenue, proctor, status, score1, score2, score3, totalScore, applicationForm) {
-    document.getElementById('edit-applicantID').value = id;
-    document.getElementById('fname').value = fname;
-    document.getElementById('mname').value = mname;
-    document.getElementById('lname').value = lname;
-    document.getElementById('edit-sex').value = sex;
-    document.getElementById('edit-province').value = province;
-    document.getElementById('edit-contactNumber').value = contactNumber;
-    document.getElementById('edit-emailAddress').value = emailAddress;
-    document.getElementById('edit-notificationDate').value = notificationDate;
-    document.getElementById('edit-examDate').value = examDate;
-    document.getElementById('edit-examVenue').value = examVenue;
-    document.getElementById('edit-proctor').value = proctor;
-    document.getElementById('edit-status').value = status;
-    document.getElementById('edit-exam1Score').value = score1;
-    document.getElementById('edit-exam2Score').value = score2;
-    document.getElementById('edit-exam3Score').value = score3;
-    document.getElementById('edit-totalScore').value = totalScore;
 
-    // Handle application form display or processing (e.g., displaying a link)
-    var attachmentLink = document.getElementById('edit-attachmentLink');
-    if (applicationForm && applicationForm !== '#') { // Ensure applicationForm is not null or '#'
-        attachmentLink.href = 'applicant-form.php?id=' + id; // Assuming you have a link structure like this
-        attachmentLink.textContent = 'View Attachment'; // Change text as needed
-    } else {
-        attachmentLink.href = '#'; // Handle case where no attachment exists
-        attachmentLink.textContent = 'No Attachment'; // Adjust text accordingly
-    }
-}
-
-</script> -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var editButtons = document.querySelectorAll('.edit-applicant-btn');
@@ -240,7 +209,6 @@ function editApplicant(id, fname,mname,lname, sex, province, contactNumber, emai
             } else {
                 applicationFormIframe.src = ''; // Clear the iframe src
                 applicationFormIframe.style.display = 'none';
-                alert("1 record deleted");
             }
         });
     });

@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = 'root';
     $password = '';
 
+
     try {
         $pdo = new PDO($dsn, $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -95,7 +96,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute update for applicantscore table
         $stmtApplicantScore->execute();
-
+        $editapplicant = $fname.' '.$mname.' '. $lname;
+        include('addrecord.php');
         // Redirect back to the previous page with success message
         header("Location: table-records.php");
         exit();

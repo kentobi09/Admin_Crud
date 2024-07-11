@@ -76,11 +76,11 @@
                                     <h4 class="section-title"><b>Examination Details</b></h4>
                                     <div class="form-group">
                                         <span> <b>Date of Notification</b></span>
-                                        <input type="text" class="form-control" id="notificationDate" name="date_of_notification" placeholder="mm/dd/yyyy" required>
+                                        <input type="text" class="form-control" id="notificationDate" name="date_of_notification" placeholder="mm/dd/yyyy" autocomplete="off" required>
                                     </div>
                                     <div class="form-group">
                                     <span> <b>Date of Examination</b></span>
-                                        <input type="text" class="form-control" id="examDate" name="date_of_examination" placeholder="mm/dd/yyyy" required>
+                                        <input type="text" class="form-control" id="examDate" name="date_of_examination" placeholder="mm/dd/yyyy" autocomplete="off"required>
                                     </div>
                                     <div class="form-group">
 

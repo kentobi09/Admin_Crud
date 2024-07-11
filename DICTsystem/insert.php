@@ -1,5 +1,6 @@
 <?php
 try {
+
     $conn = new PDO("mysql:host=localhost;dbname=applicant-records", "root", "");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
@@ -27,6 +28,7 @@ try {
         } else {
             $applicant_form = null;
         }
+
 
         $sql = "INSERT INTO applicantrecord (firstname, middlename, lastname, sex, province, exam_venue, date_of_examination, date_of_notification, proctor, status, applicant_form, contact_number, email_address)
                 VALUES (:firstname, :middlename, :lastname, :sex, :province, :exam_venue, :date_of_examination, :date_of_notification, :proctor, :status, :applicant_form, :contact_number, :email_address)";
@@ -70,8 +72,9 @@ try {
 
         // Commit transaction
         $conn->commit();
+        $addapplicant=$firstname.' '.$middlename.' '.$lastname;
+        include('addrecord.php');
 
-        // Redirect after successful insertion
         header("Location: table-records.php");
         exit();
     }
@@ -80,3 +83,4 @@ try {
     $conn->rollBack();
     echo "Error: " . $e->getMessage();
 }
+?>

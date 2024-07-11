@@ -402,7 +402,7 @@ try {
             <?php endif; ?>
         </tbody>
        </table>
-
+              
        <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-md-center">
             <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
@@ -420,5 +420,7 @@ try {
         </nav>
 
         <a href="logout.php">Logout</a>
+        <a href="history.php">History</a>
+
   </body>
 </html>
